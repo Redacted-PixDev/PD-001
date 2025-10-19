@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Auto Friend Accepter",
+  "version": "1.3.2",
+  "description": "Adds a button to accept all pending Roblox friend requests with local logging.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.roblox.com/friends*",
+        "https://www.roblox.com/users/*/friends*",
+        "https://www.roblox.com/users/friends*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
